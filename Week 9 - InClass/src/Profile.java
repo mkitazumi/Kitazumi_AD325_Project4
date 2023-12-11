@@ -17,10 +17,10 @@ public class Profile {
     private String name;
     private String pictureUrl; // Optional
     private String status;
-    private List<Profile> friends;
+    private ArrayList<Profile> friends;
 
     /**
-     *contructors
+     *contructors to create a profile
      */
     public Profile(String name) {
         this.name = name;
@@ -39,46 +39,92 @@ public class Profile {
         this.friends = new ArrayList<>();
     }
 
-    /**s
-     *getter
+    /**
+     * Mehtod to get name of profile
+     * @return name of profile
      */
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+    /**
+     * Method to get pictureURL of profile
+     * @return picture's Url
+     */
 
     public String getPictureUrl() {
         return pictureUrl;
     }
 
-    public void setPictureUrl(String pictureUrl) {
-        this.pictureUrl = pictureUrl;
-    }
+    /**
+     * Method to get status of the profile
+     * @return status of profile
+     */
 
     public String getStatus() {
         return status;
     }
 
+    /**
+     * Method to get the ArrayList of friends for the profile
+     * @return ArrayList of friends
+     */
+
+    public ArrayList<Profile> getFriends() {
+        return friends;
+    }
+
+    /**
+     * Method to set the pictureUrl for the profile
+     * @param pictureUrl picture's URL
+     */
+
+    public void setPictureUrl(String pictureUrl) {
+        this.pictureUrl = pictureUrl;
+    }
+
+    /**
+     * Method to set name for a profile
+     * @param name name of profile
+     */
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    /**
+     * Method to set Status of profile
+     * @param status status of profile
+     */
+
     public void setStatus(String status) {
         this.status = status;
     }
 
-    public List<Profile> getFriends() {
-        return friends;
-    }
+    /**
+     * Method to add a friend
+     * @param friend friend wanting to be added
+     */
 
     public void addFriend(Profile friend) {
         this.friends.add(friend);
         friend.addFriend(this); // Add this profile as a friend to the other profile (bi-directional friendship)
     }
 
+    /**
+     * Method to remove a friend
+     * @param friend friend wanting to be removed
+     */
+
     public void removeFriend(Profile friend) {
         this.friends.remove(friend);
         friend.getFriends().remove(this); // Remove this profile as a friend from the other profile
     }
+
+    /**
+     * method to make a profile print its data as a string
+     * @return String representing profile data
+     */
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
