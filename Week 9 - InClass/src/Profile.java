@@ -106,10 +106,10 @@ public class Profile {
      * @param friend friend wanting to be added
      */
 
-    public void addFriend(Profile friend) {
-        this.friends.add(friend);
-        friend.addFriend(this); // Add this profile as a friend to the other profile (bi-directional friendship)
-    }
+//    public void addFriend(Profile friend) {
+//        this.friends.add(friend);
+//        friend.addFriend(this); // Add this profile as a friend to the other profile (bi-directional friendship)
+//    }
 
     /**
      * Method to remove a friend
