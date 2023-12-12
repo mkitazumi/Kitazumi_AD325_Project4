@@ -37,8 +37,23 @@ public class ProfileManager {
       }
    }
 
-   public void Display(){
+   public void Display() {
+      System.out.println("----- Network Profiles -----");
+
+      for (Profile profile : network) {
+         System.out.println("Profile Name: " + profile.getName());
+         if (profile.getPictureUrl() != null) {
+            System.out.println("Picture URL: " + profile.getPictureUrl());
+         }
+         System.out.println("Status: " + profile.getStatus());
+         System.out.println("Friends: ");
+         for (Profile friend : profile.getFriends()) {
+            System.out.println("  - " + friend.getName());
+         }
+         System.out.println();
+      }
    }
+
 
    public void DisplayBFS(){
 
