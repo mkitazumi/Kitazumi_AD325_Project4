@@ -1,4 +1,5 @@
 package ADTPackage;
+
 import java.util.Iterator;
 /**
    An interface for a dictionary with distinct search keys.
@@ -7,8 +8,7 @@ import java.util.Iterator;
    @author Timothy M. Henry
    @version 5.0
 */
-public interface DictionaryInterface<K, V>
-{
+public interface DictionaryInterface<K, V> {
    /** Adds a new entry to this dictionary. If the given search key already
        exists in the dictionary, replaces the corresponding value.
        @param key    An object search key of the new entry.

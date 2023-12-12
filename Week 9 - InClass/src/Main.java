@@ -9,6 +9,7 @@ public class Main {
         me.addFriend(Janna);
         manager.connect(me);
 
-        manager.Display();
+        //manager.Display();
+        manager.DisplayBFS();
     }
 }

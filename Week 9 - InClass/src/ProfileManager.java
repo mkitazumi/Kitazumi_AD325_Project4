@@ -2,6 +2,8 @@ import GraphPackage.UndirectedGraph;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class ProfileManager {
    private UndirectedGraph<Profile> network;
@@ -60,6 +62,19 @@ public class ProfileManager {
 
 
    public void DisplayBFS(){
+      System.out.println("----Network BFS Profiles----");
+      Queue<Profile> profiles = new LinkedList<>();
+      ArrayList<Profile> visited = new ArrayList<>();
+      profiles.add(origin);
+      while(!profiles.isEmpty()){
+         Profile current = profiles.poll();
+         if(!visited.contains(current)){
+            System.out.println(current);
+            visited.add(current);
+            profiles.addAll(current.getFriends());
+         }
+
+      }
 
    }
 

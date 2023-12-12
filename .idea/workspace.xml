@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Fixed up add and remove friends from infinte recursion also messing with connect to try and get it to work">
+    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Got display working (Hopefully)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/DirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/DirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/UndirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/UndirectedGraph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" afterDir="false" />
     </list>
@@ -146,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702351025568</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Got display working (Hopefully)">
+      <option name="closed" value="true" />
+      <created>1702423104518</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1702423104518</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -168,6 +174,7 @@
     <MESSAGE value="Added All Java Doc to imported classes" />
     <MESSAGE value="Worked on ProfileManager as best as I could so far" />
     <MESSAGE value="Fixed up add and remove friends from infinte recursion also messing with connect to try and get it to work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed up add and remove friends from infinte recursion also messing with connect to try and get it to work" />
+    <MESSAGE value="Got display working (Hopefully)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Got display working (Hopefully)" />
   </component>
 </project>
