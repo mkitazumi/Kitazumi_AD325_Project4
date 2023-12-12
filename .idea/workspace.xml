@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Added Profile, ProfileManager, and Main">
+    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Finshed Java Doc for profile class">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/Profile.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Profile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,12 +100,20 @@
       <option name="project" value="LOCAL" />
       <updated>1702179494705</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Finshed Java Doc for profile class">
+      <created>1702332775795</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702332775795</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Deleted Packages not in of src folder" />
     <MESSAGE value="Added Profile, ProfileManager, and Main" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Profile, ProfileManager, and Main" />
+    <MESSAGE value="Finshed Java Doc for profile class" />
+    <option name="LAST_COMMIT_MESSAGE" value="Finshed Java Doc for profile class" />
   </component>
 </project>
