@@ -1,5 +1,7 @@
 import GraphPackage.UndirectedGraph;
 
+import java.util.ArrayList;
+
 public class ProfileManager {
    private UndirectedGraph<Profile> network;
    private Profile origin;
@@ -7,7 +9,12 @@ public class ProfileManager {
    public ProfileManager(Profile origin){
       network = new UndirectedGraph<>();
       this.origin = origin;
+      network.addVertex(origin);
 
+   }
+
+   public UndirectedGraph<Profile> getNetwork() {
+      return network;
    }
 
    /**
@@ -23,8 +30,11 @@ public class ProfileManager {
       network.addVertex(profile);
    }
 
-   public void connect(Profile vertex1, Profile vertex2){
-      network.addEdge(vertex1, vertex2);
+   public void connect(Profile vertex1){
+      ArrayList<Profile> friends = vertex1.getFriends();
+      for(Profile friend : friends){
+         network.addEdge(vertex1, friend);
+      }
    }
 
    public void Display(){

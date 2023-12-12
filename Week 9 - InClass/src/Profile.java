@@ -106,10 +106,14 @@ public class Profile {
      * @param friend friend wanting to be added
      */
 
-//    public void addFriend(Profile friend) {
-//        this.friends.add(friend);
-//        friend.addFriend(this); // Add this profile as a friend to the other profile (bi-directional friendship)
-//    }
+    public void addFriend(Profile friend) {
+        if(friends.contains(friend)){
+            return;
+        }
+        this.friends.add(friend);
+        friend.addFriend(this);
+        // Add this profile as a friend to the other profile (bi-directional friendship)
+    }
 
     /**
      * Method to remove a friend
@@ -117,6 +121,9 @@ public class Profile {
      */
 
     public void removeFriend(Profile friend) {
+        if(!friends.contains(friend)){
+            return;
+        }
         this.friends.remove(friend);
         friend.getFriends().remove(this); // Remove this profile as a friend from the other profile
     }

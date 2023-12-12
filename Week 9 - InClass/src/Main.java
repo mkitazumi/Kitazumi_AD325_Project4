@@ -1,8 +1,15 @@
 public class Main {
     public static void main(String[] args) {
         Profile me = new Profile("Ashtin");
+        Profile Mika = new Profile("Mika");
+        Profile Janna = new Profile("Janna");
         ProfileManager manager = new ProfileManager(me);
-        manager.addProfile(me);
-        System.out.println();
+        manager.addProfile(Mika);
+        manager.addProfile(Janna);
+        me.addFriend(Janna);
+        manager.connect(me);
+
+        System.out.println(manager.getNetwork().getNumberOfEdges());
+        System.out.println(manager.getNetwork().getNumberOfVertices());
     }
 }
