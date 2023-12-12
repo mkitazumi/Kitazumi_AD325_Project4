@@ -56,3 +56,4 @@ public class UndirectedGraph<T> extends DirectedGraph<T> implements GraphInterfa
         throw new UnsupportedOperationException("Topological sort is illegal in an undirected graph.");
     } // end getTopologicalOrder
 } // end UndirectedGraph
+

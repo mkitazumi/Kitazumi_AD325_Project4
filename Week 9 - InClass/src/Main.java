@@ -9,7 +9,6 @@ public class Main {
         me.addFriend(Janna);
         manager.connect(me);
 
-        System.out.println(manager.getNetwork().getNumberOfEdges());
-        System.out.println(manager.getNetwork().getNumberOfVertices());
+        manager.Display();
     }
 }

@@ -6,7 +6,7 @@ import java.util.Iterator;
 
 public class DirectedGraph<T> implements GraphInterface<T>
 {
-    private DictionaryInterface<T, VertexInterface<T>> vertices;
+    public DictionaryInterface<T, VertexInterface<T>> vertices;
     private int edgeCount;
 
     /**

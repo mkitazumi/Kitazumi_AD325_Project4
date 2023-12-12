@@ -1,6 +1,7 @@
 import GraphPackage.UndirectedGraph;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ProfileManager {
    private UndirectedGraph<Profile> network;
@@ -25,7 +26,7 @@ public class ProfileManager {
       if (network.isEmpty()){
          origin = profile;
          network.addVertex(origin);
-
+         return;
       }
       network.addVertex(profile);
    }
@@ -38,19 +39,22 @@ public class ProfileManager {
    }
 
    public void Display() {
+      Iterator networkIT = network.vertices.getKeyIterator();
       System.out.println("----- Network Profiles -----");
 
-      for (Profile profile : network) {
-         System.out.println("Profile Name: " + profile.getName());
-         if (profile.getPictureUrl() != null) {
-            System.out.println("Picture URL: " + profile.getPictureUrl());
+      while(networkIT.hasNext()){
+         Profile current = (Profile) networkIT.next();
+         System.out.println("Profile Name: " + current.getName());
+         if (current.getPictureUrl() != null) {
+            System.out.println("Picture URL: " + current.getPictureUrl());
          }
-         System.out.println("Status: " + profile.getStatus());
+         System.out.println("Status: " + current.getStatus());
          System.out.println("Friends: ");
-         for (Profile friend : profile.getFriends()) {
+         for (Profile friend : current.getFriends()) {
             System.out.println("  - " + friend.getName());
          }
          System.out.println();
+
       }
    }
 
