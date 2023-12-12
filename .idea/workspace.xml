@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Added Rough Draft UML">
+    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Added All Java Doc to imported classes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/DirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/DirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/UndirectedGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/UndirectedGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/Vertex.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/GraphPackage/Vertex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +119,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702339876870</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Added All Java Doc to imported classes">
+      <created>1702345352975</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1702345352975</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -128,6 +134,18 @@
     <MESSAGE value="Added Profile, ProfileManager, and Main" />
     <MESSAGE value="Finshed Java Doc for profile class" />
     <MESSAGE value="Added Rough Draft UML" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Rough Draft UML" />
+    <MESSAGE value="Added All Java Doc to imported classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added All Java Doc to imported classes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Week 9 - InClass/src/Main.java</url>
+          <line>4</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
