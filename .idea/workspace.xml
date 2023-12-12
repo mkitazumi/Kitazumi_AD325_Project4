@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Got display working (Hopefully)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" afterDir="false" />
+    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="unversioned files">
       <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +150,23 @@
       <option name="project" value="LOCAL" />
       <updated>1702423104518</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="DisplayBFS in progress (works kinda)">
+      <option name="closed" value="true" />
+      <created>1702425090141</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1702425090141</updated>
+    </task>
+    <task id="LOCAL-00010" summary="unversioned files">
+      <option name="closed" value="true" />
+      <created>1702425114255</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1702425114255</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -175,6 +189,8 @@
     <MESSAGE value="Worked on ProfileManager as best as I could so far" />
     <MESSAGE value="Fixed up add and remove friends from infinte recursion also messing with connect to try and get it to work" />
     <MESSAGE value="Got display working (Hopefully)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Got display working (Hopefully)" />
+    <MESSAGE value="DisplayBFS in progress (works kinda)" />
+    <MESSAGE value="unversioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="unversioned files" />
   </component>
 </project>

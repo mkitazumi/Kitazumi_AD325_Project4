@@ -7,6 +7,7 @@ public class Main {
         manager.addProfile(Mika);
         manager.addProfile(Janna);
         me.addFriend(Janna);
+        me.addFriend(Mika);
         manager.connect(me);
 
         //manager.Display();
