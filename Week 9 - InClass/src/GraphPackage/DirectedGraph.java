@@ -9,18 +9,34 @@ public class DirectedGraph<T> implements GraphInterface<T>
     private DictionaryInterface<T, VertexInterface<T>> vertices;
     private int edgeCount;
 
+    /**
+     * Constructor for a Directed Graph
+     */
     public DirectedGraph()
     {
         vertices = new UnsortedLinkedDictionary<>();
         edgeCount = 0;
     } // end default constructor
 
+    /**
+     * Adds a vertex to this graoh
+     * @param vertexLabel  An object that labels the new vertex and is
+    distinct from the labels of current vertices.
+     * @return true if vertex was added, false if not
+     */
     public boolean addVertex(T vertexLabel)
     {
         VertexInterface<T> addOutcome = vertices.add(vertexLabel, new Vertex<>(vertexLabel));
         return addOutcome == null; // Was addition to dictionary successful?
     } // end addVertex
 
+    /**
+     * Adds an Edge between two vertices in this graph with weight
+     * @param begin  An object that labels the origin vertex of the edge.
+     * @param end    An object, distinct from begin, that labels the end vertex of the edge.
+     * @param edgeWeight  The real value of the edge's weight.
+     * @return true if edge was added, false if not
+     */
     public boolean addEdge(T begin, T end, double edgeWeight)
     {
         boolean result = false;
@@ -33,11 +49,23 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return result;
     } // end addEdge
 
+    /**
+     * Adds an Edge between two vertices in this graph without weight
+     * @param begin  An object that labels the origin vertex of the edge.
+     * @param end    An object, distinct from begin, that labels the end vertex of the edge.
+     * @return true if edge was added, false if not
+     */
     public boolean addEdge(T begin, T end)
     {
         return addEdge(begin, end, 0);
     } // end addEdge
 
+    /**
+     * checks if a path/edge exists between two given vertices
+     * @param begin  An object that labels the origin vertex of the edge.
+     * @param end    An object that labels the end vertex of the edge.
+     * @return true if edge/path exists, false if not
+     */
     public boolean hasEdge(T begin, T end)
     {
         boolean found = false;
@@ -57,27 +85,45 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return found;
     } // end hasEdge
 
+    /**
+     * checks if the graph is empty
+     * @return true if empty, false if not
+     */
     public boolean isEmpty()
     {
         return vertices.isEmpty();
     } // end isEmpty
 
+    /**
+     * clears the graph
+     */
     public void clear()
     {
         vertices.clear();
         edgeCount = 0;
     } // end clear
 
+    /**
+     * gets number of vertices in the graph
+     * @return number of vertices in graph
+     */
     public int getNumberOfVertices()
     {
         return vertices.getSize();
     } // end getNumberOfVertices
 
+    /**
+     * Gets number of edges in the graph
+     * @return number of edges in graph
+     */
     public int getNumberOfEdges()
     {
         return edgeCount;
     } // end getNumberOfEdges
 
+    /**
+     * resets all vertices in graph (unvisit all, cost of any paths are set to 0, and all predecessors are now null)
+     */
     protected void resetVertices()
     {
         Iterator<VertexInterface<T>> vertexIterator = vertices.getValueIterator();
@@ -90,6 +136,11 @@ public class DirectedGraph<T> implements GraphInterface<T>
         } // end while
     } // end resetVertices
 
+    /**
+     * gets an order of vertices in a BreadthFirst order
+     * @param origin  An object that labels the origin vertex of the traversal.
+     * @return Breadth First order of vertices in this graph
+     */
     public QueueInterface<T> getBreadthFirstTraversal(T origin)
     {
         resetVertices();
@@ -122,6 +173,11 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return traversalOrder;
     } // end getBreadthFirstTraversal
 
+    /**
+     * Gets the order of vertices in this graph by a DepthFirstTraversal
+     * @param origin  An object that labels the origin vertex of the traversal.
+     * @return DepthFirstSearch of the vertices in this graph
+     */
     // Exercise 10, Chapter 29
     public QueueInterface<T> getDepthFirstTraversal(T origin)
     {
@@ -153,6 +209,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return traversalOrder;
     } // end getDepthFirstTraversal
 
+    /**
+     * Gets the order of vertices in this graph in a topological order
+     * @return vertices in topological order
+     */
     public StackInterface<T> getTopologicalOrder()
     {
         resetVertices();
@@ -169,6 +229,17 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return vertexStack;
     } // end getTopologicalOrder
 
+    /**
+     * Gets the shortest path between two given vertices
+     * @param begin  An object that labels the path's origin vertex.
+     * @param end    An object that labels the path's destination vertex.
+     * @param path   A stack of labels that is empty initially;
+    at the completion of the method, this stack contains
+    the labels of the vertices along the shortest path;
+    the label of the origin vertex is at the top, and
+    the label of the destination vertex is at the bottom
+     * @return Length of the Shortest path
+     */
     public int getShortestPath(T begin, T end, StackInterface<T> path)
     {
         resetVertices();
@@ -218,6 +289,17 @@ public class DirectedGraph<T> implements GraphInterface<T>
 
     // Exercise 15, Chapter 29
     /** Precondition: path is an empty stack (NOT null) */
+    /**
+     * Gets the cheapest (lowest weighted) path between teo given vertices
+     * @param begin  An object that labels the path's origin vertex.
+     * @param end    An object that labels the path's destination vertex.
+     * @param path   A stack of labels that is empty initially;
+    at the completion of the method, this stack contains
+    the labels of the vertices along the cheapest path;
+    the label of the origin vertex is at the top, and
+    the label of the destination vertex is at the bottom
+     * @return the cost of the cheapest path
+     */
     public double getCheapestPath(T begin, T end, StackInterface<T> path) // STUDENT EXERCISE
     {
         resetVertices();
@@ -278,6 +360,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return pathCost;
     } // end getCheapestPath
 
+    /**
+     *
+     * @return
+     */
     protected VertexInterface<T> findTerminal()
     {
         boolean found = false;
@@ -303,7 +389,12 @@ public class DirectedGraph<T> implements GraphInterface<T>
         return result;
     } // end findTerminal
 
+
     // Used for testing
+
+    /**
+     * Displays all the edges in the graph
+     */
     public void displayEdges()
     {
         System.out.println("\nEdges exist from the first vertex in each line to the other vertices in the line.");
@@ -315,12 +406,19 @@ public class DirectedGraph<T> implements GraphInterface<T>
         } // end while
     } // end displayEdges
 
+
     private class EntryPQ implements Comparable<EntryPQ>
     {
         private VertexInterface<T> vertex;
         private VertexInterface<T> previousVertex;
         private double cost; // cost to nextVertex
 
+        /**
+         * Constructor for EntryPQ
+         * @param vertex vertex you are on
+         * @param cost cost of path connected to vertex
+         * @param previousVertex vertex before the current one
+         */
         private EntryPQ(VertexInterface<T> vertex, double cost, VertexInterface<T> previousVertex)
         {
             this.vertex = vertex;
@@ -328,21 +426,38 @@ public class DirectedGraph<T> implements GraphInterface<T>
             this.cost = cost;
         } // end constructor
 
+        /**
+         * Gets vertex
+         * @return vertex
+         */
         public VertexInterface<T> getVertex()
         {
             return vertex;
         } // end getVertex
 
+        /**
+         * gets predecessor
+         * @return predecessor (previous Vertex)
+         */
         public VertexInterface<T> getPredecessor()
         {
             return previousVertex;
         } // end getPredecessor
 
+        /**
+         * Gets cost of path
+         * @return cost of path
+         */
         public double getCost()
         {
             return cost;
         } // end getCost
 
+        /**
+         * Compares Entries
+         * @param otherEntry the object to be compared.
+         * @return Integer resulting in comparison
+         */
         public int compareTo(EntryPQ otherEntry)
         {
             // Using opposite of reality since our priority queue uses a maxHeap;
@@ -350,6 +465,10 @@ public class DirectedGraph<T> implements GraphInterface<T>
             return (int)Math.signum(otherEntry.cost - cost);
         } // end compareTo
 
+        /**
+         * Method to put vertex data into a string
+         * @return String of vertex data
+         */
         public String toString()
         {
             return vertex.toString() + " " + cost;
