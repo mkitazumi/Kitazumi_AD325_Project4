@@ -1,0 +1,47 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"6ba418dc-429e-4798-b213-6944096610b1\" name=\"Changes\" comment=\"Deleted Packages not in of src folder\">\n      <change afterPath=\"$PROJECT_DIR$/.idea/vcs.xml\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Week 9 - InClass/src/Main.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Week 9 - InClass/src/Profile.java\" afterDir=\"false\" />\n      <change afterPath=\"$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/checkstyle-idea.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/checkstyle-idea.xml\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"CompilerWorkspaceConfiguration\">\n    <option name=\"CLEAR_OUTPUT_DIRECTORY\" value=\"false\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"Class\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"FindBugs-IDEA-Workspace\">\n    <analyzeAfterCompile>true</analyzeAfterCompile>\n    <toolWindowToFront>false</toolWindowToFront>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"MarkdownSettingsMigration\">\n    <option name=\"stateVersion\" value=\"1\" />\n  </component>\n  <component name=\"ProjectId\" id=\"2ZKlscgXscATCvbznH3I3zGIhIW\" />\n  <component name=\"ProjectViewState\">\n    <option name=\"abbreviatePackageNames\" value=\"true\" />\n    <option name=\"autoscrollFromSource\" value=\"true\" />\n    <option name=\"autoscrollToSource\" value=\"true\" />\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showExcludedFiles\" value=\"false\" />\n    <option name=\"showModules\" value=\"false\" />\n    <option name=\"sortByType\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"git-widget-placeholder\": \"main\",\n    \"last_opened_file_path\": \"/Users/ashtinrivada/Desktop/ComputerScience/Data Structure/Kitazumi_AD325_Project4\"\n  }\n}]]></component>\n  <component name=\"RunManager\">\n    <configuration default=\"true\" type=\"Application\" factoryName=\"Application\">\n      <option name=\"WORKING_DIRECTORY\" value=\"$PROJECT_DIR$\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"JUnit\" factoryName=\"JUnit\">\n      <option name=\"TEST_OBJECT\" value=\"class\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"%MODULE_WORKING_DIR%\" />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n    <configuration default=\"true\" type=\"TestNG\">\n      <option name=\"TEST_OBJECT\" value=\"CLASS\" />\n      <option name=\"WORKING_DIRECTORY\" value=\"%MODULE_WORKING_DIR%\" />\n      <properties />\n      <listeners />\n      <method v=\"2\">\n        <option name=\"Make\" enabled=\"true\" />\n      </method>\n    </configuration>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"6ba418dc-429e-4798-b213-6944096610b1\" name=\"Changes\" comment=\"\" />\n      <created>1702178863324</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1702178863324</updated>\n    </task>\n    <task id=\"LOCAL-00001\" summary=\"Deleted Packages not in of src folder\">\n      <created>1702179023035</created>\n      <option name=\"number\" value=\"00001\" />\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\n      <option name=\"project\" value=\"LOCAL\" />\n      <updated>1702179023035</updated>\n    </task>\n    <option name=\"localTasksCounter\" value=\"2\" />\n    <servers />\n  </component>\n  <component name=\"VcsManagerConfiguration\">\n    <MESSAGE value=\"Deleted Packages not in of src folder\" />\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Deleted Packages not in of src folder\" />\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 0129002bb3a31dd7048e7b895ee2e5a55d9d1b54)
++++ b/.idea/workspace.xml	(date 1702327661209)
+@@ -4,12 +4,7 @@
+     <option name="autoReloadType" value="SELECTIVE" />
+   </component>
+   <component name="ChangeListManager">
+-    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Deleted Packages not in of src folder">
+-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Profile.java" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/Week 9 - InClass/src/ProfileManager.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
++    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Added Profile, ProfileManager, and Main">
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+@@ -95,11 +90,19 @@
+       <option name="project" value="LOCAL" />
+       <updated>1702179023035</updated>
+     </task>
+-    <option name="localTasksCounter" value="2" />
++    <task id="LOCAL-00002" summary="Added Profile, ProfileManager, and Main">
++      <created>1702179494705</created>
++      <option name="number" value="00002" />
++      <option name="presentableId" value="LOCAL-00002" />
++      <option name="project" value="LOCAL" />
++      <updated>1702179494705</updated>
++    </task>
++    <option name="localTasksCounter" value="3" />
+     <servers />
+   </component>
+   <component name="VcsManagerConfiguration">
+     <MESSAGE value="Deleted Packages not in of src folder" />
+-    <option name="LAST_COMMIT_MESSAGE" value="Deleted Packages not in of src folder" />
++    <MESSAGE value="Added Profile, ProfileManager, and Main" />
++    <option name="LAST_COMMIT_MESSAGE" value="Added Profile, ProfileManager, and Main" />
+   </component>
+ </project>
+\ No newline at end of file
