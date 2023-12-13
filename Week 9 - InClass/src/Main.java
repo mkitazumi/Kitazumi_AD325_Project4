@@ -14,8 +14,7 @@ public class Main {
 
         //manager.Display();
         manager.DisplayBFS();
-
-        //trying to add people
+//----------------------------------------------------------------------------------------------------------------------
         //asking user to make pf
         Scanner myObj = new Scanner(System.in);
         System.out.print("1.Join the network\n" +
@@ -31,7 +30,7 @@ public class Main {
         int number = myObj.nextInt();
         while(number>=1 && number <= 8){
             switch (number){
-                //joining network, making pf. Name only
+                //joining network, making pf. Name only-------------------------------------------
                 case 1:
                     System.out.print("please enter name: ");
                     String name = myObj.next();
@@ -39,13 +38,65 @@ public class Main {
                     manager.addProfile(newProf);
                     manager.getNetwork().addVertex(newProf);
 
-                    System.out.print("please enter another number: ");
+                    System.out.print(" \n"+
+                            "please enter another number from the main menu: ");
                     number = myObj.nextInt();
                     break;
-                //modifying pf
+                //modifying pf. 1 will be changing name, 2 will be profile picture
+                //3 will be status. This will be done with another switch---------------------
                 case 2:
-                    System.out.print("");
+                    // Modify the profile
+                    Scanner scanner = new Scanner(System.in); // Initialize the Scanner here
+                    System.out.print(" \n" + "Choose what to modify:\n" +
+                            "1. Name\n" +
+                            "2. Picture\n" +
+                            "3. Status\n" +
+                            "please enter a number: ");
+
+                    int modificationChoice = 0;
+
+                    try {
+                        modificationChoice = scanner.nextInt();
+                    } catch (java.util.InputMismatchException e) {
+                        System.out.println("Invalid input. Please enter a number.");
+                        scanner.nextLine(); // Consume the invalid input
+                        break;
+                    }
+
+                    scanner.nextLine(); // Consume the newline character
+
+                    switch (modificationChoice) {
+                        case 1:
+                            System.out.print("Enter new name: ");
+                            String updatedName = scanner.nextLine();
+                            me.setName(updatedName);
+                            System.out.println("Name updated to: " + updatedName);
+                            break;
+
+                        case 2:
+                            System.out.print("Enter new picture URL: ");
+                            String updatedPictureUrl = scanner.nextLine();
+                            me.setPictureUrl(updatedPictureUrl);
+                            System.out.println("Picture URL updated to: " + updatedPictureUrl);
+                            break;
+
+                        case 3:
+                            System.out.print("Enter new status: ");
+                            String updatedStatus = scanner.nextLine();
+                            me.setStatus(updatedStatus);
+                            System.out.println("Status updated to: " + updatedStatus);
+                            break;
+
+                        default:
+                            System.out.println("Invalid choice for modification.");
+                    }
+
+                    // Close the scanner to prevent resource leaks
+                    System.out.print(" \n"+
+                            "please enter another number from the main menu: ");
+                    number = myObj.nextInt();
                     break;
+
                 //display all pf
                 case 3:
                     break;
