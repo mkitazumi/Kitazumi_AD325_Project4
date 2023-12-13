@@ -52,13 +52,14 @@ public class ProfileManager {
          System.out.println("Status: " + current.getStatus());
          System.out.println("Friends: ");
          for (Profile friend : current.getFriends()) {
-            System.out.println("  - " + friend.getName());
+            if(friend.getName() != null) {
+               System.out.println("  - " + friend.getName());
+            }
          }
          System.out.println();
 
       }
    }
-
 
    public void DisplayBFS(){
 
@@ -67,15 +68,20 @@ public class ProfileManager {
       profiles =  network.getBreadthFirstTraversal(origin);
       while(!profiles.isEmpty()){
          Profile current = profiles.dequeue();
+         if(current.getName() == null) {
+            network.vertices.remove(current);
+            current = profiles.dequeue();
+         }
          System.out.println(current);
 
       }
 
    }
 
-   public Profile removeProfile(Profile profile){
-      Profile removedProfile = null;
-      return removedProfile;
+   public void removeProfile(Profile profile){
+      profile.clear();
+      network.vertices.remove(profile);
+
    }
 
 

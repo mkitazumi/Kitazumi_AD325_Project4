@@ -142,8 +142,17 @@ public class Profile {
         sb.append("Status: " + status + "\n");
         sb.append("Friends: \n");
         for (Profile friend : friends) {
-            sb.append("  - " + friend.getName() + "\n");
+            if(friend.getName() != null) {
+                sb.append("  - " + friend.getName() + "\n");
+            }
         }
         return sb.toString();
+    }
+
+    public void clear(){
+        friends = null;
+        name = null;
+        status = null;
+        pictureUrl = null;
     }
 }
