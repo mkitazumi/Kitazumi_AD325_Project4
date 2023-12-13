@@ -70,9 +70,14 @@ public class ProfileManager {
          Profile current = profiles.dequeue();
          if(current.getName() == null) {
             network.vertices.remove(current);
-            current = profiles.dequeue();
+            if(!profiles.isEmpty()) {
+               current = profiles.dequeue();
+            }
+
          }
-         System.out.println(current);
+         if(current.getName() != null) {
+            System.out.println(current);
+         }
 
       }
 
