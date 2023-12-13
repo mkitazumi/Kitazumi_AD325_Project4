@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Scanner;
 
 public class Main {
@@ -20,17 +21,17 @@ public class Main {
         System.out.print("1.Join the network\n" +
                 "2.Modify the profile\n" +
                 "3.Display all the profiles (add friend from displayed list)\n" +
-                "4.Ensure another profile can be added, not just the initial one\n" +
-                "5.Add a friend\n" +
-                "6.See list of current user's friends\n" +
-                "7.Delete a profile\n" +
-                "8.See a list of the current user's friends friends\n" +
+                "4.Add a friend\n" +
+                "5.See list of current user's friends\n" +
+                "6.Delete a profile\n" +
+                "7.See a list of the current user's friends friends\n" +
+                "Or enter any other number to exit\n" +
                 "Please enter a number: ");
 
         int number = myObj.nextInt();
-        while(number>=1 && number <= 8){
+        while(number > 0 && number < 8){
             switch (number){
-                //joining network, making pf. Name only-------------------------------------------
+                //joining network, making pf. Name only------------------------------------------------
                 case 1:
                     System.out.print("please enter name: ");
                     String name = myObj.next();
@@ -43,7 +44,7 @@ public class Main {
                     number = myObj.nextInt();
                     break;
                 //modifying pf. 1 will be changing name, 2 will be profile picture
-                //3 will be status. This will be done with another switch---------------------
+                //3 will be status. This will be done with another switch--------------------------------
                 case 2:
                     // Modify the profile
                     Scanner scanner = new Scanner(System.in); // Initialize the Scanner here
@@ -97,27 +98,90 @@ public class Main {
                     number = myObj.nextInt();
                     break;
 
-                //display all pf
+                //display all profiles-------------------------------------------------------------------------------
                 case 3:
+                    manager.Display();
+
+                    System.out.print(" \n"+
+                            "please enter another number from the main menu: ");
+                    number = myObj.nextInt();
                     break;
-                //adding another pf
+                //adding friend----------------------------------------------------------------------------------------
                 case 4:
+                    // Add a friend
+                    Scanner scan = new Scanner(System.in);
+                    System.out.print("Enter the name of the friend you want to add: ");
+                    String friendName = scan.nextLine();
+
+                    boolean friendAdded = false;
+                    Iterator<Profile> iterator = manager.getNetwork().vertices.getKeyIterator();
+
+                    while (iterator.hasNext()) {
+                        Profile profile = iterator.next();
+                        if (profile.getName().equalsIgnoreCase(friendName)) {
+                            me.addFriend(profile);
+                            System.out.println("Friend added: " + friendName);
+                            friendAdded = true;
+                            break;
+                        }
+                    }
+
+                    if (!friendAdded) {
+                        System.out.println("No profile found with the name: " + friendName);
+                    }
+
+                    System.out.print(" \n"+
+                            "please enter another number from the main menu: ");
+                    number = myObj.nextInt();
                     break;
-                //adding friend
+                //see current friends-----------------------------------------------------------------------------------
                 case 5:
+                    System.out.println("Your Friends:");
+                    for (Profile friend : me.getFriends()) {
+                        System.out.println("- " + friend.getName());
+                    }
+
+                    System.out.print(" \n"+
+                            "please enter another number from the main menu: ");
+                    number = myObj.nextInt();
                     break;
-                //see list of friends
+                //delete profile----------------------------------------------------------------------------------------
                 case 6:
+                    // Delete a profile
+                    Scanner scan6 = new Scanner(System.in);
+                    System.out.print("Enter the name of the profile you want to delete: ");
+                    String profileToDelete = scan6.nextLine();
+
+                    Profile profileToRemove = null;
+                    Iterator<Profile> iterator6 = manager.getNetwork().vertices.getKeyIterator();
+
+                    while (iterator6.hasNext()) {
+                        Profile profile = iterator6.next();
+                        if (profile.getName().equalsIgnoreCase(profileToDelete)) {
+                            profileToRemove = profile;
+                            break;
+                        }
+                    }
+
+                    if (profileToRemove != null) {
+                        // Remove the profile from the network
+                        manager.removeProfile(profileToRemove);
+                        System.out.println("Profile deleted: " + profileToDelete);
+                    } else {
+                        System.out.println("No profile found with the name: " + profileToDelete);
+                    }
+
+                    System.out.print(" \n"+
+                            "please enter another number from the main menu: ");
+                    number = myObj.nextInt();
                     break;
-                //delete pf
+                //see friends of friends-------------------------------------------------------------------------------
                 case 7:
                     break;
-                //see users friend's friends
-                case 8:
-                    break;
+
             }//switch
         }//while
-        System.out.println("thank you :>");
+        System.out.println("thank you :>. Exiting");
 
 
 
