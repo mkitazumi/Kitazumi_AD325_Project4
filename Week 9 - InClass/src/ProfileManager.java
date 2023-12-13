@@ -84,6 +84,12 @@ public class ProfileManager {
    }
 
    public void removeProfile(Profile profile){
+      if(profile == origin){
+         Iterator networkIT = network.vertices.getKeyIterator();
+         if(networkIT.hasNext()){
+            origin = (Profile) networkIT.next();
+         }
+      }
       profile.clear();
       network.vertices.remove(profile);
 
