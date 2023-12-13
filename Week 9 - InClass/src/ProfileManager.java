@@ -70,15 +70,26 @@ public class ProfileManager {
          Profile current = profiles.dequeue();
          if(current.getName() == null) {
             network.vertices.remove(current);
-            current = profiles.dequeue();
+            if(!profiles.isEmpty()) {
+               current = profiles.dequeue();
+            }
+
          }
-         System.out.println(current);
+         if(current.getName() != null) {
+            System.out.println(current);
+         }
 
       }
 
    }
 
    public void removeProfile(Profile profile){
+      if(profile == origin){
+         Iterator networkIT = network.vertices.getKeyIterator();
+         if(networkIT.hasNext()){
+            origin = (Profile) networkIT.next();
+         }
+      }
       profile.clear();
       network.vertices.remove(profile);
 
