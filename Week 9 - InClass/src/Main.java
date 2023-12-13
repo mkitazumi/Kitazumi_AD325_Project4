@@ -6,12 +6,18 @@ public class Main {
         Profile me = new Profile("Ashtin");
         Profile Mika = new Profile("Mika");
         Profile Janna = new Profile("Janna");
+        Profile Kona = new Profile("Kona");
+        Profile Taro = new Profile("Taro");
         ProfileManager manager = new ProfileManager(me);
         manager.addProfile(Mika);
         manager.addProfile(Janna);
+        manager.addProfile(Kona);
+        manager.addProfile(Taro);
         me.addFriend(Janna);
         me.addFriend(Mika);
         manager.connect(me);
+        Mika.addFriend(Kona);
+        Mika.addFriend(Taro);
 
         //manager.Display();
         manager.DisplayBFS();
@@ -177,6 +183,24 @@ public class Main {
                     break;
                 //see friends of friends-------------------------------------------------------------------------------
                 case 7:
+                    System.out.println("Friends of Friends:");
+
+                    for (Profile friend : me.getFriends()) {
+                        System.out.println("Friends of " + friend.getName() + ":");
+
+                        for (Profile friendOfFriend : friend.getFriends()) {
+                            // Exclude the current user from the list
+                            if (!friendOfFriend.equals(me)) {
+                                System.out.println("- " + friendOfFriend.getName());
+                            }
+                        }
+
+                        System.out.println();
+                    }
+
+                    System.out.print(" \n"+
+                            "please enter another number from the main menu: ");
+                    number = myObj.nextInt();
                     break;
 
             }//switch
