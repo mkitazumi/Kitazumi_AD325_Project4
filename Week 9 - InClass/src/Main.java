@@ -29,13 +29,16 @@ public class Main {
                 "Please enter a number: ");
 
         int number = myObj.nextInt();
+
         while(number>=1 && number <= 8){
             switch (number){
                 //joining network, making pf. Name only
                 case 1:
                     System.out.print("please enter name: ");
-                    String name = myObj.nextLine();
-                    //n
+                    String name = myObj.next();
+
+                    System.out.print("please enter another number: ");
+                    number = myObj.nextInt();
                     break;
                 //modifying pf
                 case 2:
@@ -55,14 +58,16 @@ public class Main {
                     break;
                 //delete pf
                 case 7:
+
                     break;
                 //see users friend's friends
                 case 8:
                     break;
+                default:
+                    throw new IllegalStateException("Unexpected value: " + number);
             }//switch
         }//while
-        System.out.println("thank you :>");
-
+        System.out.println("thank you");
 
 
     }
