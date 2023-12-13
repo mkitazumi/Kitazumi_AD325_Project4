@@ -39,12 +39,33 @@ public class Main {
             switch (number){
                 //joining network, making pf. Name only------------------------------------------------
                 case 1:
-                    System.out.print("please enter name: ");
+                    System.out.print("Please enter name: ");
                     String name = myObj.next();
-                    Profile newProf = new Profile(name);
-                    manager.addProfile(newProf);
-                    manager.getNetwork().addVertex(newProf);
 
+                    // Check if a profile with the same name already exists
+                    boolean profileExists = false;
+
+                    Iterator<Profile> iterator = manager.getNetwork().vertices.getKeyIterator();
+                    while (iterator.hasNext()) {
+                        Profile profile = iterator.next();
+                        if (profile.getName().equalsIgnoreCase(name)) {
+                            profileExists = true;
+                            break;
+                        }
+                    }
+
+                    if (profileExists) {
+                        System.out.println("Error: Profile with the name '" + name + "' already exists. Please choose a different name.");
+                    } else {
+                        // If the profile does not exist, create and add it
+                        Profile newProf = new Profile(name);
+                        manager.addProfile(newProf);
+                        manager.getNetwork().addVertex(newProf);
+
+                        // Set the new profile as the current user ("me")
+                        me = newProf;
+                        System.out.println("Welcome, " + me.getName() + "!");
+                    }
                     System.out.print(" \n"+
                             "please enter another number from the main menu: ");
                     number = myObj.nextInt();
@@ -53,7 +74,10 @@ public class Main {
                 //3 will be status. This will be done with another switch--------------------------------
                 case 2:
                     // Modify the profile
-                    Scanner scanner = new Scanner(System.in); // Initialize the Scanner here
+                    // Initialize the Scanner here. I dont know why but unless i initalize it here the code breaks
+                    //tried different ways to fix it but unless its a new on then it dosent work
+                    //so theres going to be lots of new redundant scanners.
+                    Scanner scanner = new Scanner(System.in);
                     System.out.print(" \n" + "Choose what to modify:\n" +
                             "1. Name\n" +
                             "2. Picture\n" +
@@ -120,10 +144,10 @@ public class Main {
                     String friendName = scan.nextLine();
 
                     boolean friendAdded = false;
-                    Iterator<Profile> iterator = manager.getNetwork().vertices.getKeyIterator();
+                    Iterator<Profile> iterator4 = manager.getNetwork().vertices.getKeyIterator();
 
-                    while (iterator.hasNext()) {
-                        Profile profile = iterator.next();
+                    while (iterator4.hasNext()) {
+                        Profile profile = iterator4.next();
                         if (profile.getName().equalsIgnoreCase(friendName)) {
                             me.addFriend(profile);
                             System.out.println("Friend added: " + friendName);
