@@ -1,8 +1,20 @@
 import java.util.Iterator;
 import java.util.Scanner;
-
+/**
+ * Ashtin Rivada, Mika Kitazumi
+ * 12/2023
+ * AD325: Project 4: Social Media Network
+ * This code is meant to help our understanding of abstract data types (lists, heaps
+ * queues etc) and graphs. We are to make a rudementry social media network that makes use of graphs and lists
+ * to store information. This allows users to join, modify, add and display friends, delete profiles, and see friends
+ * of friends.
+ * main class for social media network assignmet
+ */
+/
 public class Main {
+
     public static void main(String[] args) {
+        //test cases
         Profile me = new Profile("Ashtin");
         Profile Mika = new Profile("Mika");
         Profile Janna = new Profile("Janna");
@@ -37,7 +49,16 @@ public class Main {
         int number = myObj.nextInt();
         while(number > 0 && number < 8){
             switch (number){
-                //joining network, making pf. Name only------------------------------------------------
+                /**
+                 * joining network
+                 * user creates a profile and will then be the one modified and is the
+                 * current user profile. Name only
+                 *
+                 * @param name, the name of the new profile created
+                 *
+                 * runtime is O(n) where n is the number of profiles
+                 */
+                /
                 case 1:
                     System.out.print("Please enter name: ");
                     String name = myObj.next();
@@ -70,8 +91,15 @@ public class Main {
                             "please enter another number from the main menu: ");
                     number = myObj.nextInt();
                     break;
-                //modifying pf. 1 will be changing name, 2 will be profile picture
-                //3 will be status. This will be done with another switch--------------------------------
+                /**
+                 * case 2: modifying the profile
+                 * the current user can modify their own name, picture, and status. uses a switch statment.
+                 *
+                 * @param modificationChoice, the users choice for modification
+                 *
+                 * O(1), only involves one profile
+                 */
+                /
                 case 2:
                     // Modify the profile
                     // Initialize the Scanner here. I dont know why but unless i initalize it here the code breaks
@@ -128,7 +156,13 @@ public class Main {
                     number = myObj.nextInt();
                     break;
 
-                //display all profiles-------------------------------------------------------------------------------
+                /**
+                 * displaying all profiles
+                 * prints details of all profiles in a list form
+                 *
+                 * O(n) where n is the number of profiles
+                 */
+                /
                 case 3:
                     manager.Display();
 
@@ -136,7 +170,14 @@ public class Main {
                             "please enter another number from the main menu: ");
                     number = myObj.nextInt();
                     break;
-                //adding friend----------------------------------------------------------------------------------------
+                /**
+                 * adding friends
+                 * allows user to add friends to their profile. throwing a error if they dont exist
+                 * @param name, name of existing person being added
+                 *
+                 * O(n) where n is the number of profiles
+                 */
+                /
                 case 4:
                     // Add a friend
                     Scanner scan = new Scanner(System.in);
@@ -164,7 +205,13 @@ public class Main {
                             "please enter another number from the main menu: ");
                     number = myObj.nextInt();
                     break;
-                //see current friends-----------------------------------------------------------------------------------
+                /**
+                 * seeing current users friends
+                 * display all friends of current users friends
+                 *
+                 * O(1) runtime because we only deal with the one profile
+                 */
+                /
                 case 5:
                     System.out.println("Your Friends:");
                     for (Profile friend : me.getFriends()) {
@@ -175,7 +222,15 @@ public class Main {
                             "please enter another number from the main menu: ");
                     number = myObj.nextInt();
                     break;
-                //delete profile----------------------------------------------------------------------------------------
+                /**
+                 * deletes profiles
+                 * lets user delete a profile from the network. The profile has to exist. if it exist then
+                 * it will be removed
+                 * @param profileToDelete the name of the profile to be deleted
+                 *
+                 * O(n) where n is the number of profiles
+                 */
+                /
                 case 6:
                     // Delete a profile
                     Scanner scan6 = new Scanner(System.in);
@@ -205,7 +260,13 @@ public class Main {
                             "please enter another number from the main menu: ");
                     number = myObj.nextInt();
                     break;
-                //see friends of friends-------------------------------------------------------------------------------
+                /**
+                 * sees the list of the current users friend's friend's
+                 * prints out the friends of friends
+                 *
+                 * runtime O(m) where m is the number of friend and the friend's of friend's
+                 */
+                /
                 case 7:
                     System.out.println("Friends of Friends:");
 
