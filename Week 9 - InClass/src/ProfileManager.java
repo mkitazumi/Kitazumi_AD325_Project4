@@ -5,9 +5,15 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class ProfileManager {
+   //
    private UndirectedGraph<Profile> network;
    private Profile origin;
 
+   /**
+    * Creates a new ProfileManager instance with a specified origin profile.
+    *
+    * @param origin The profile representing the starting point of the network.
+    */
    public ProfileManager(Profile origin){
       network = new UndirectedGraph<>();
       this.origin = origin;
@@ -32,6 +38,15 @@ public class ProfileManager {
       network.addVertex(profile);
    }
 
+   /**
+    * Connect adds a profile to another profile making them friends
+    * via a adge.
+    * @param vertex, vertex of person
+    * @return friend and vertx attached by edge
+    *
+    * runtime is O(n) where n is the number of friends that vertex has
+    */
+   /
    public void connect(Profile vertex1){
       ArrayList<Profile> friends = vertex1.getFriends();
       for(Profile friend : friends){
@@ -39,6 +54,13 @@ public class ProfileManager {
       }
    }
 
+   /**
+    * Display takes the current profile and prints it
+    * @param profile needs a current profile to display
+    * @return displays a profile
+    * runtime is O(n) where n is the number of friends
+    */
+   /
    public void Display() {
       Iterator networkIT = network.vertices.getKeyIterator();
       System.out.println("----- Network Profiles -----");
@@ -61,6 +83,15 @@ public class ProfileManager {
       }
    }
 
+   /**
+    * displays all the profiles in BFS style format
+    * @param needs profiles in the network
+    * @return displays all the profiles in BFS format
+    *
+    * rutime is O(n+m) where n is the number of profile and m is the number of friends
+    * the person has
+    */
+   /
    public void DisplayBFS(){
 
       System.out.println("----Network BFS Profiles----");
@@ -83,6 +114,15 @@ public class ProfileManager {
 
    }
 
+   /**
+    * Removes a profile clears and removes a specific profile
+    * @param profile needs a profile to remove
+    * @return removes profile from network
+    *
+    *O(n) where n is profiles in the network
+    * for worst case cause it has to iterate through all the profiles
+    */
+   /
    public void removeProfile(Profile profile){
       if(profile == origin){
          Iterator networkIT = network.vertices.getKeyIterator();

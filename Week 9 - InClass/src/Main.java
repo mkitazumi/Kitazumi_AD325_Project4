@@ -46,7 +46,7 @@ public class Main {
                 "Or enter any other number to exit\n" +
                 "Please enter a number: ");
 
-        int number = myObj.nextInt();
+        int number = myObj.nextInt(); //code breaks if i take this out so it stays
         while(number > 0 && number < 8){
             switch (number){
                 /**

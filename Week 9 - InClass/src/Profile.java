@@ -104,6 +104,8 @@ public class Profile {
     /**
      * Method to add a friend
      * @param friend friend wanting to be added
+     *
+     * runtime O(n) where n is the number of friends the person has
      */
 
     public void addFriend(Profile friend) {
@@ -118,6 +120,8 @@ public class Profile {
     /**
      * Method to remove a friend
      * @param friend friend wanting to be removed
+     *
+     *  O(n) where runtime is the number of friends the person has
      */
 
     public void removeFriend(Profile friend) {
@@ -138,17 +142,22 @@ public class Profile {
         sb.append("Name: " + name + "\n");
         if (pictureUrl != null) {
             sb.append("Picture URL: " + pictureUrl + "\n");
-        }
+        } // runtime is O(1) because were given a string
         sb.append("Status: " + status + "\n");
         sb.append("Friends: \n");
         for (Profile friend : friends) {
             if(friend.getName() != null) {
                 sb.append("  - " + friend.getName() + "\n");
             }
-        }
+        }//runtime is O(n) where n is # of friends. because we need to iterate
+        // through all the friends in the profile
         return sb.toString();
     }
 
+    /**
+     * method to clear a profile
+     */
+    /
     public void clear(){
         friends = null;
         name = null;
