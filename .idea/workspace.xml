@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Re-push of what Mika did because it would not update for me">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Kitazumi_AD325_Project4.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Kitazumi_AD325_Project4.iml" afterDir="false" />
+    <list default="true" id="6ba418dc-429e-4798-b213-6944096610b1" name="Changes" comment="Added Finished UML">
       <change beforePath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Week 9 - InClass/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Kitazumi_AD325_Project4/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kitazumi_AD325_Project4/Main.class" afterDir="false" />
     </list>
@@ -185,7 +183,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702433055791</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added Finished UML">
+      <option name="closed" value="true" />
+      <created>1702495670245</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1702495670245</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -212,7 +218,8 @@
     <MESSAGE value="unversioned files" />
     <MESSAGE value="DIsplayBFS working (I think)" />
     <MESSAGE value="Re-push of what Mika did because it would not update for me" />
-    <option name="LAST_COMMIT_MESSAGE" value="Re-push of what Mika did because it would not update for me" />
+    <MESSAGE value="Added Finished UML" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Finished UML" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

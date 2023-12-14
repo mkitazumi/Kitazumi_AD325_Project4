@@ -10,7 +10,7 @@ import java.util.Scanner;
  * of friends.
  * main class for social media network assignmet
  */
-/
+
 public class Main {
 
     public static void main(String[] args) {
@@ -58,7 +58,7 @@ public class Main {
                  *
                  * runtime is O(n) where n is the number of profiles
                  */
-                /
+
                 case 1:
                     System.out.print("Please enter name: ");
                     String name = myObj.next();
@@ -99,7 +99,7 @@ public class Main {
                  *
                  * O(1), only involves one profile
                  */
-                /
+
                 case 2:
                     // Modify the profile
                     // Initialize the Scanner here. I dont know why but unless i initalize it here the code breaks
@@ -162,7 +162,7 @@ public class Main {
                  *
                  * O(n) where n is the number of profiles
                  */
-                /
+
                 case 3:
                     manager.Display();
 
@@ -177,7 +177,7 @@ public class Main {
                  *
                  * O(n) where n is the number of profiles
                  */
-                /
+
                 case 4:
                     // Add a friend
                     Scanner scan = new Scanner(System.in);
@@ -211,7 +211,7 @@ public class Main {
                  *
                  * O(1) runtime because we only deal with the one profile
                  */
-                /
+
                 case 5:
                     System.out.println("Your Friends:");
                     for (Profile friend : me.getFriends()) {
@@ -230,7 +230,7 @@ public class Main {
                  *
                  * O(n) where n is the number of profiles
                  */
-                /
+
                 case 6:
                     // Delete a profile
                     Scanner scan6 = new Scanner(System.in);
@@ -266,7 +266,7 @@ public class Main {
                  *
                  * runtime O(m) where m is the number of friend and the friend's of friend's
                  */
-                /
+
                 case 7:
                     System.out.println("Friends of Friends:");
 
